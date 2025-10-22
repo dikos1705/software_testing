@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.6 on win32)" generated="20251022 20:03:16.379" rpa="false" schemaversion="4">
+<suite id="s1" name="testCases" source="C:\Users\Asus\Desktop\Software_Testing\robotTests\testCases">
+<suite id="s1-s1" name="1 Login Tests" source="C:\Users\Asus\Desktop\Software_Testing\robotTests\testCases\1_login_tests.robot">
+<test id="s1-s1-t1" name="Login With Valid User" line="5">
+<kw name="Open SauceDemo" library="resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20251022 20:03:16.766" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20251022 20:03:16.765" endtime="20251022 20:03:20.830"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20251022 20:03:20.830" endtime="20251022 20:03:20.854"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20251022 20:03:20.854" endtime="20251022 20:03:20.855"/>
+</kw>
+<status status="PASS" starttime="20251022 20:03:16.765" endtime="20251022 20:03:20.855"/>
+</kw>
+<kw name="Login With Valid Credentials" library="resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20251022 20:03:20.856" level="FAIL">Variable '${USERNAME}' not found.</msg>
+<status status="FAIL" starttime="20251022 20:03:20.856" endtime="20251022 20:03:20.856"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20251022 20:03:20.856" endtime="20251022 20:03:20.857"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20251022 20:03:20.857" endtime="20251022 20:03:20.857"/>
+</kw>
+<status status="FAIL" starttime="20251022 20:03:20.855" endtime="20251022 20:03:20.857"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//span[text()='Products']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20251022 20:03:20.857" endtime="20251022 20:03:20.857"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=//span[text()='Products']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="NOT RUN" starttime="20251022 20:03:20.857" endtime="20251022 20:03:20.857"/>
+</kw>
+<kw name="Close Browser" library="resources">
+<status status="NOT RUN" starttime="20251022 20:03:20.858" endtime="20251022 20:03:20.858"/>
+</kw>
+<doc>Проверка успешного входа на сайт с правильными данными.</doc>
+<status status="FAIL" starttime="20251022 20:03:16.763" endtime="20251022 20:03:20.858">Variable '${USERNAME}' not found.</status>
+</test>
+<test id="s1-s1-t2" name="Login With Invalid User" line="13">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20251022 20:03:20.864" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20251022 20:03:20.862" endtime="20251022 20:03:33.451"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20251022 20:03:33.453" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20251022 20:03:33.452" endtime="20251022 20:03:33.570"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>wrong_password</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20251022 20:03:33.572" level="INFO">Typing text 'wrong_password' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20251022 20:03:33.572" endtime="20251022 20:03:33.703"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20251022 20:03:33.704" level="INFO">Clicking button 'id=login-button'.</msg>
+<status status="PASS" starttime="20251022 20:03:33.704" endtime="20251022 20:03:33.820"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>css=.error-message-container</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20251022 20:03:33.821" endtime="20251022 20:03:33.836"/>
+</kw>
+<kw name="Page Should Contain Text">
+<arg>Epic sadface: Username and password do not match</arg>
+<msg timestamp="20251022 20:03:33.840" level="FAIL">No keyword with name 'Page Should Contain Text' found. Did you mean:
+    SeleniumLibrary.Page Should Contain
+    SeleniumLibrary.Page Should Contain Textfield
+    SeleniumLibrary.Page Should Contain Button
+    SeleniumLibrary.Page Should Contain List</msg>
+<status status="FAIL" starttime="20251022 20:03:33.840" endtime="20251022 20:03:33.840"/>
+</kw>
+<kw name="Close Browser" library="resources">
+<status status="NOT RUN" starttime="20251022 20:03:33.840" endtime="20251022 20:03:33.840"/>
+</kw>
+<doc>Проверка ошибки при вводе неправильного пароля.</doc>
+<status status="FAIL" starttime="20251022 20:03:20.860" endtime="20251022 20:03:33.841">No keyword with name 'Page Should Contain Text' found. Did you mean:
+    SeleniumLibrary.Page Should Contain
+    SeleniumLibrary.Page Should Contain Textfield
+    SeleniumLibrary.Page Should Contain Button
+    SeleniumLibrary.Page Should Contain List</status>
+</test>
+<status status="FAIL" starttime="20251022 20:03:16.404" endtime="20251022 20:03:33.842"/>
+</suite>
+<suite id="s1-s2" name="2 Logout Tests" source="C:\Users\Asus\Desktop\Software_Testing\robotTests\testCases\2_logout_tests.robot">
+<test id="s1-s2-t1" name="Logout After Login" line="5">
+<kw name="Open SauceDemo" library="resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20251022 20:03:33.852" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20251022 20:03:33.850" endtime="20251022 20:03:36.809"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20251022 20:03:36.809" endtime="20251022 20:03:36.847"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20251022 20:03:36.848" endtime="20251022 20:03:36.863"/>
+</kw>
+<status status="PASS" starttime="20251022 20:03:33.850" endtime="20251022 20:03:36.863"/>
+</kw>
+<kw name="Login With Valid Credentials" library="resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20251022 20:03:36.867" level="FAIL">Variable '${USERNAME}' not found.</msg>
+<status status="FAIL" starttime="20251022 20:03:36.865" endtime="20251022 20:03:36.867"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20251022 20:03:36.867" endtime="20251022 20:03:36.868"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20251022 20:03:36.868" endtime="20251022 20:03:36.868"/>
+</kw>
+<status status="FAIL" starttime="20251022 20:03:36.864" endtime="20251022 20:03:36.869"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=react-burger-menu-btn</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20251022 20:03:36.872" endtime="20251022 20:03:36.872"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=react-burger-menu-btn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20251022 20:03:36.875" endtime="20251022 20:03:36.875"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=logout_sidebar_link</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20251022 20:03:36.875" endtime="20251022 20:03:36.876"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>id=logout_sidebar_link</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20251022 20:03:36.876" endtime="20251022 20:03:36.876"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20251022 20:03:36.877" endtime="20251022 20:03:36.877"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="NOT RUN" starttime="20251022 20:03:36.877" endtime="20251022 20:03:36.877"/>
+</kw>
+<kw name="Close Browser" library="resources">
+<status status="NOT RUN" starttime="20251022 20:03:36.881" endtime="20251022 20:03:36.882"/>
+</kw>
+<doc>Проверка выхода из системы.</doc>
+<status status="FAIL" starttime="20251022 20:03:33.850" endtime="20251022 20:03:36.889">Variable '${USERNAME}' not found.</status>
+</test>
+<status status="FAIL" starttime="20251022 20:03:33.843" endtime="20251022 20:03:36.893"/>
+</suite>
+<suite id="s1-s3" name="3 Add To Cart Tests" source="C:\Users\Asus\Desktop\Software_Testing\robotTests\testCases\3_add_to_cart_tests.robot">
+<test id="s1-s3-t1" name="Add Item To Cart" line="5">
+<kw name="Open SauceDemo" library="resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20251022 20:03:36.925" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20251022 20:03:36.923" endtime="20251022 20:03:40.026"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20251022 20:03:40.026" endtime="20251022 20:03:40.078"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20251022 20:03:40.078" endtime="20251022 20:03:40.088"/>
+</kw>
+<status status="PASS" starttime="20251022 20:03:36.922" endtime="20251022 20:03:40.088"/>
+</kw>
+<kw name="Login With Valid Credentials" library="resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20251022 20:03:40.092" level="FAIL">Variable '${USERNAME}' not found.</msg>
+<status status="FAIL" starttime="20251022 20:03:40.090" endtime="20251022 20:03:40.092"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20251022 20:03:40.092" endtime="20251022 20:03:40.092"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20251022 20:03:40.093" endtime="20251022 20:03:40.093"/>
+</kw>
+<status status="FAIL" starttime="20251022 20:03:40.090" endtime="20251022 20:03:40.093"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=add-to-cart-sauce-labs-backpack</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20251022 20:03:40.094" endtime="20251022 20:03:40.094"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=add-to-cart-sauce-labs-backpack</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20251022 20:03:40.094" endtime="20251022 20:03:40.095"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=.shopping_cart_link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20251022 20:03:40.095" endtime="20251022 20:03:40.095"/>
+</kw>
+<kw name="Page Should Contain Text">
+<arg>Sauce Labs Backpack</arg>
+<status status="NOT RUN" starttime="20251022 20:03:40.102" endtime="20251022 20:03:40.103"/>
+</kw>
+<kw name="Close Browser" library="resources">
+<status status="NOT RUN" starttime="20251022 20:03:40.104" endtime="20251022 20:03:40.104"/>
+</kw>
+<doc>Проверка добавления товара в корзину.</doc>
+<status status="FAIL" starttime="20251022 20:03:36.920" endtime="20251022 20:03:40.105">Variable '${USERNAME}' not found.</status>
+</test>
+<status status="FAIL" starttime="20251022 20:03:36.895" endtime="20251022 20:03:40.107"/>
+</suite>
+<suite id="s1-s4" name="4 Checkout Tests" source="C:\Users\Asus\Desktop\Software_Testing\robotTests\testCases\4_checkout_tests.robot">
+<test id="s1-s4-t1" name="Complete Checkout Process" line="5">
+<kw name="Open SauceDemo" library="resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20251022 20:03:40.144" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20251022 20:03:40.143" endtime="20251022 20:03:43.340"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20251022 20:03:43.340" endtime="20251022 20:03:43.380"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20251022 20:03:43.380" endtime="20251022 20:03:43.397"/>
+</kw>
+<status status="PASS" starttime="20251022 20:03:40.142" endtime="20251022 20:03:43.397"/>
+</kw>
+<kw name="Login With Valid Credentials" library="resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20251022 20:03:43.400" level="FAIL">Variable '${USERNAME}' not found.</msg>
+<status status="FAIL" starttime="20251022 20:03:43.398" endtime="20251022 20:03:43.400"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20251022 20:03:43.400" endtime="20251022 20:03:43.400"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20251022 20:03:43.401" endtime="20251022 20:03:43.401"/>
+</kw>
+<status status="FAIL" starttime="20251022 20:03:43.398" endtime="20251022 20:03:43.402"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=add-to-cart-sauce-labs-bike-light</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20251022 20:03:43.405" endtime="20251022 20:03:43.405"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=.shopping_cart_link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20251022 20:03:43.406" endtime="20251022 20:03:43.406"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=checkout</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20251022 20:03:43.406" endtime="20251022 20:03:43.406"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=first-name</arg>
+<arg>Test</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20251022 20:03:43.407" endtime="20251022 20:03:43.407"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=last-name</arg>
+<arg>User</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20251022 20:03:43.407" endtime="20251022 20:03:43.407"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=postal-code</arg>
+<arg>12345</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20251022 20:03:43.408" endtime="20251022 20:03:43.408"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=continue</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20251022 20:03:43.408" endtime="20251022 20:03:43.408"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Payment Information</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20251022 20:03:43.408" endtime="20251022 20:03:43.408"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=finish</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20251022 20:03:43.409" endtime="20251022 20:03:43.409"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Thank you for your order!</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20251022 20:03:43.409" endtime="20251022 20:03:43.409"/>
+</kw>
+<kw name="Page Should Contain Text">
+<arg>Thank you for your order!</arg>
+<status status="NOT RUN" starttime="20251022 20:03:43.414" endtime="20251022 20:03:43.414"/>
+</kw>
+<kw name="Close Browser" library="resources">
+<status status="NOT RUN" starttime="20251022 20:03:43.415" endtime="20251022 20:03:43.415"/>
+</kw>
+<doc>Проверка успешного оформления заказа.</doc>
+<status status="FAIL" starttime="20251022 20:03:40.140" endtime="20251022 20:03:43.415">Variable '${USERNAME}' not found.</status>
+</test>
+<status status="FAIL" starttime="20251022 20:03:40.109" endtime="20251022 20:03:43.416"/>
+</suite>
+<status status="FAIL" starttime="20251022 20:03:16.381" endtime="20251022 20:03:43.422"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="5" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="5" skip="0" id="s1" name="testCases">testCases</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s1" name="1 Login Tests">testCases.1 Login Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s2" name="2 Logout Tests">testCases.2 Logout Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s3" name="3 Add To Cart Tests">testCases.3 Add To Cart Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s4" name="4 Checkout Tests">testCases.4 Checkout Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20251022 20:03:16.422" level="ERROR">Error in file 'C:\Users\Asus\Desktop\Software_Testing\robotTests\resources\resources.robot' on line 7: Setting variable '${USERNAME} standard_user' failed: Invalid variable name '${USERNAME} standard_user'.</msg>
+<msg timestamp="20251022 20:03:16.422" level="ERROR">Error in file 'C:\Users\Asus\Desktop\Software_Testing\robotTests\resources\resources.robot' on line 8: Setting variable '${PASSWORD} secret_sauce' failed: Invalid variable name '${PASSWORD} secret_sauce'.</msg>
+<msg timestamp="20251022 20:03:33.846" level="ERROR">Error in file 'C:\Users\Asus\Desktop\Software_Testing\robotTests\resources\resources.robot' on line 7: Setting variable '${USERNAME} standard_user' failed: Invalid variable name '${USERNAME} standard_user'.</msg>
+<msg timestamp="20251022 20:03:33.847" level="ERROR">Error in file 'C:\Users\Asus\Desktop\Software_Testing\robotTests\resources\resources.robot' on line 8: Setting variable '${PASSWORD} secret_sauce' failed: Invalid variable name '${PASSWORD} secret_sauce'.</msg>
+<msg timestamp="20251022 20:03:36.906" level="ERROR">Error in file 'C:\Users\Asus\Desktop\Software_Testing\robotTests\resources\resources.robot' on line 7: Setting variable '${USERNAME} standard_user' failed: Invalid variable name '${USERNAME} standard_user'.</msg>
+<msg timestamp="20251022 20:03:36.909" level="ERROR">Error in file 'C:\Users\Asus\Desktop\Software_Testing\robotTests\resources\resources.robot' on line 8: Setting variable '${PASSWORD} secret_sauce' failed: Invalid variable name '${PASSWORD} secret_sauce'.</msg>
+<msg timestamp="20251022 20:03:40.118" level="ERROR">Error in file 'C:\Users\Asus\Desktop\Software_Testing\robotTests\resources\resources.robot' on line 7: Setting variable '${USERNAME} standard_user' failed: Invalid variable name '${USERNAME} standard_user'.</msg>
+<msg timestamp="20251022 20:03:40.122" level="ERROR">Error in file 'C:\Users\Asus\Desktop\Software_Testing\robotTests\resources\resources.robot' on line 8: Setting variable '${PASSWORD} secret_sauce' failed: Invalid variable name '${PASSWORD} secret_sauce'.</msg>
+</errors>
+</robot>
