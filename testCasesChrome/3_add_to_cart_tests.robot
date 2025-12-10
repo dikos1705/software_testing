@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../resources/resources.robot
+Resource    ../resources/resources_chrome.robot
 
 *** Test Cases ***
 Add Item To Cart

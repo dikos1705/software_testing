@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../resources/resources.robot
+Resource    ../resources/resources_chrome.robot
 
 *** Test Cases ***
 Complete Checkout Process
@@ -8,6 +8,7 @@ Complete Checkout Process
     Login With Valid Credentials
     Click Button    id=add-to-cart-sauce-labs-bike-light
     Click Element   css=.shopping_cart_link
+    Wait Until Element Is Visible    id=checkout    timeout=5s
     Click Button    id=checkout
     Input Text      id=first-name    Test
     Input Text      id=last-name     User

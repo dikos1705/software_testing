@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../resources/resources.robot
+Resource    ../resources/resources_chrome.robot
 
 *** Test Cases ***
 Login With Valid User
@@ -12,11 +12,10 @@ Login With Valid User
 
 Login With Invalid User
     [Documentation]    Проверка ошибки при вводе неправильного пароля.
-    Open Browser    ${URL}    ${BROWSER}
+    Open SauceDemo
     Input Text    id=user-name    standard_user
     Input Text    id=password     wrong_password
     Click Button  id=login-button
     Wait Until Page Contains Element    css=.error-message-container
     Page Should Contain  Epic sadface: Username and password do not match
-
     Close Browser
